@@ -1,12 +1,14 @@
 language: node_js
 node_js:
-  - node
+- node
 install:
-  - npm install
+- npm install
 script:
-  - npm run dist
+- npm run dist
 deploy:
   provider: npm
-  email: "404069912@qq.com"
-  api_key: ""
-
+  email: 404069912@qq.com
+  on:
+    tags: true
+  api_key:
+    secure: K87wy3qtxR/kL9bO2hMiYIipKKxdwt8ZXkYQ63BLftZmiNdqmCIixeY//vpP9npntHYwmmZLKvbjhj5oXafszKfyrk32k4RNHPYrufCVMocSlB0RWCuZF6vPAFB70SnA643KNJTmEUoFUKwHo4rPLjQmgrjj1mSceAiQAbOJInm+8ImGyUSHz1yR2BNJ13CaYrPhxVoPupLLgCXY0Q5aExG/SfdPzg+V845VXoX5kPwxRJB8IlceIRnvk8Oh62slhDgGH1CHVcFcdSay/egLQ+WvRErr1mnL4jiLJm9kHbtA2AVWBdRoFnV6BI//7oBOgvO/P6bcuZZjQaWrY/ATDExq5CtuCxDCkkatOxHODYcfvK7q4uY7VXPvGCDMIxCDmroIqMeitNxfgJvgt1oaoZ0cB/vvoMHPLff9Opxc4QhhwwORJqYBFuZR+z8MrxIn/iww8pAJF++aAtgGRqETGU2OU6usEvtUqMoy+deZ90Oq6iRbnh23LeV6KBy6qa8GU4Ydy1rtnF+zUvfeCElod05sXH0H18txo+sdwibaB3CwOROnCZDNVDw3jKp0ikOavb1Bhvsb3S2ZOiBG/BZDWfMNyfx/RCeeFqPID4i5Exro7LWD4TSnOzP2rGxCzdGIz2hax8JnBiZL4kLTZuA0hxRdkJycgyfp0pqGOni88l8=
