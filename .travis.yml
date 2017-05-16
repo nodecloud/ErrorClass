@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - node
+install:
+  - npm install
+script:
+  - npm run dist
+deploy:
+  provider: npm
+  email: "404069912@qq.com"
+  api_key: ""
+
