@@ -5,5 +5,6 @@ export ConflictError from './lib/ConflictError';
 export DatabaseError from './lib/DatabaseError';
 export RequestBodyError from './lib/RequestBodyError';
 export UnSupportError from './lib/UnSupportError';
+export AbstractError from './lib/AbstractError';
 
 
