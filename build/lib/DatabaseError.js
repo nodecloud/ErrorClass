@@ -29,7 +29,7 @@ var DatabaseError = function (_AbstractError) {
         var _this = _possibleConstructorReturn(this, (DatabaseError.__proto__ || Object.getPrototypeOf(DatabaseError)).call(this, obj));
 
         _lodash2.default.defaults(_this, {
-            status: 500,
+            status: 503,
             code: 101105
         });
         return _this;
