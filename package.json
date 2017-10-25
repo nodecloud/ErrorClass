@@ -9,6 +9,7 @@
   "author": "yedaodao",
   "license": "MIT",
   "scripts": {
+    "test": "mocha",
     "dist": "babel ./ -d build/ --ignore node_modules/,build/"
   },
   "main": "./build/index.js",
@@ -20,6 +21,7 @@
     "babel-core": "^6.24.1",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "mocha": "^4.0.1"
   }
 }
