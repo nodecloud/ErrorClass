@@ -101,6 +101,30 @@ default code: 101105
 
 status: 503
 
+### ForbiddenError
+
+usage: no permission to invoke
+
+default code: 101108
+
+status: 403
+
+### InternalError
+
+usage: some unexpected error occurred.
+
+default code: 101107
+
+status: 500
+
+### NotFoundError
+
+usage: the resource is not exist.
+
+default code: 101106
+
+status: 404
+
 ## Custom Error Class
 
 ```javascript

@@ -6,5 +6,8 @@ export DatabaseError from './lib/DatabaseError';
 export RequestBodyError from './lib/RequestBodyError';
 export UnSupportError from './lib/UnSupportError';
 export AbstractError from './lib/AbstractError';
+export ForbiddenError from './lib/ForbiddenError';
+export InternalError from './lib/InternalError';
+export NotFoundError from './lib/NotFoundError';
 
 
