@@ -80,6 +80,14 @@ default code: 103
 
 status: 503
 
+### ConfigError
+
+usage: get server config error
+
+default code: 104
+
+status: 409
+
 ### ConflictError
 
 usage: operate a resource in invalid status
@@ -103,6 +111,14 @@ usage: no permission to access a resource
 default code: 101
 
 status: 403
+
+### InfrastructureError
+
+usage: basic infrastructure error
+
+default code: 105
+
+status: 503
 
 ### InternalError
 
