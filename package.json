@@ -9,8 +9,8 @@
   "author": "yedaodao",
   "license": "MIT",
   "scripts": {
-    "test": "mocha",
-    "dist": "babel ./ -d build/ --ignore node_modules/,build/"
+    "test": "npm run dist && mocha",
+    "dist": "babel ./ -d build/ --ignore node_modules/,build/,test/"
   },
   "main": "./build/index.js",
   "dependencies": {

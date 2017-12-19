@@ -20,23 +20,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RequestBodyError = function (_AbstractError) {
-    _inherits(RequestBodyError, _AbstractError);
+var InternalError = function (_AbstractError) {
+    _inherits(InternalError, _AbstractError);
 
-    function RequestBodyError(obj) {
-        _classCallCheck(this, RequestBodyError);
+    function InternalError(obj) {
+        _classCallCheck(this, InternalError);
 
-        var _this = _possibleConstructorReturn(this, (RequestBodyError.__proto__ || Object.getPrototypeOf(RequestBodyError)).call(this, obj));
+        var _this = _possibleConstructorReturn(this, (InternalError.__proto__ || Object.getPrototypeOf(InternalError)).call(this, obj));
 
-        _lodash2.default.defaults(_this, {
+        _lodash2.default.assign(_this, {
             status: 500,
-            code: 101107
+            code: 100
         });
         return _this;
     }
 
-    return RequestBodyError;
+    return InternalError;
 }(_AbstractError3.default);
 
-exports.default = RequestBodyError;
+exports.default = InternalError;
 module.exports = exports['default'];

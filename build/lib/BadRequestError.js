@@ -28,9 +28,9 @@ var BadRequestError = function (_AbstractError) {
 
         var _this = _possibleConstructorReturn(this, (BadRequestError.__proto__ || Object.getPrototypeOf(BadRequestError)).call(this, obj));
 
-        _lodash2.default.defaults(_this, {
+        _lodash2.default.assign(_this, {
             status: 400,
-            code: 101102
+            code: 102
         });
         return _this;
     }

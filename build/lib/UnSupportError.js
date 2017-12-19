@@ -28,9 +28,9 @@ var UnSupportError = function (_AbstractError) {
 
         var _this = _possibleConstructorReturn(this, (UnSupportError.__proto__ || Object.getPrototypeOf(UnSupportError)).call(this, obj));
 
-        _lodash2.default.defaults(_this, {
+        _lodash2.default.assign(_this, {
             status: 503,
-            code: 101103
+            code: 103
         });
         return _this;
     }

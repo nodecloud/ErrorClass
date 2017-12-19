@@ -28,9 +28,9 @@ var ConflictError = function (_AbstractError) {
 
         var _this = _possibleConstructorReturn(this, (ConflictError.__proto__ || Object.getPrototypeOf(ConflictError)).call(this, obj));
 
-        _lodash2.default.defaults(_this, {
+        _lodash2.default.assign(_this, {
             status: 409,
-            code: 101104
+            code: 107
         });
         return _this;
     }

@@ -28,9 +28,9 @@ var AuthError = function (_AbstractError) {
 
         var _this = _possibleConstructorReturn(this, (AuthError.__proto__ || Object.getPrototypeOf(AuthError)).call(this, obj));
 
-        _lodash2.default.defaults(_this, {
+        _lodash2.default.assign(_this, {
             status: 401,
-            code: 101101
+            code: 108
         });
         return _this;
     }

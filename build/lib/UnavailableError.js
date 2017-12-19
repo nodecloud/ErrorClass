@@ -20,23 +20,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ForbiddenError = function (_AbstractError) {
-    _inherits(ForbiddenError, _AbstractError);
+var UnavailableError = function (_AbstractError) {
+    _inherits(UnavailableError, _AbstractError);
 
-    function ForbiddenError(obj) {
-        _classCallCheck(this, ForbiddenError);
+    function UnavailableError(obj) {
+        _classCallCheck(this, UnavailableError);
 
-        var _this = _possibleConstructorReturn(this, (ForbiddenError.__proto__ || Object.getPrototypeOf(ForbiddenError)).call(this, obj));
+        var _this = _possibleConstructorReturn(this, (UnavailableError.__proto__ || Object.getPrototypeOf(UnavailableError)).call(this, obj));
 
         _lodash2.default.assign(_this, {
-            status: 403,
-            code: 101
+            status: 503,
+            code: 103
         });
         return _this;
     }
 
-    return ForbiddenError;
+    return UnavailableError;
 }(_AbstractError3.default);
 
-exports.default = ForbiddenError;
+exports.default = UnavailableError;
 module.exports = exports['default'];

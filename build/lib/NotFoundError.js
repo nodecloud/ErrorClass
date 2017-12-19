@@ -20,23 +20,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RequestBodyError = function (_AbstractError) {
-    _inherits(RequestBodyError, _AbstractError);
+var NotFoundError = function (_AbstractError) {
+    _inherits(NotFoundError, _AbstractError);
 
-    function RequestBodyError(obj) {
-        _classCallCheck(this, RequestBodyError);
+    function NotFoundError(obj) {
+        _classCallCheck(this, NotFoundError);
 
-        var _this = _possibleConstructorReturn(this, (RequestBodyError.__proto__ || Object.getPrototypeOf(RequestBodyError)).call(this, obj));
+        var _this = _possibleConstructorReturn(this, (NotFoundError.__proto__ || Object.getPrototypeOf(NotFoundError)).call(this, obj));
 
-        _lodash2.default.defaults(_this, {
+        _lodash2.default.assign(_this, {
             status: 404,
-            code: 101106
+            code: 103
         });
         return _this;
     }
 
-    return RequestBodyError;
+    return NotFoundError;
 }(_AbstractError3.default);
 
-exports.default = RequestBodyError;
+exports.default = NotFoundError;
 module.exports = exports['default'];

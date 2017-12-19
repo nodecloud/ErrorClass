@@ -27,13 +27,24 @@ var AbstractError = function (_Error) {
         var _this = _possibleConstructorReturn(this, (AbstractError.__proto__ || Object.getPrototypeOf(AbstractError)).call(this));
 
         _this.extra = {};
+        _this.code = 100;
         Object.setPrototypeOf(_this, AbstractError.prototype);
         if (_lodash2.default.isString(obj)) {
             _this.message = obj;
             return _possibleConstructorReturn(_this);
         }
         for (var key in obj) {
-            _this[key] = obj[key];
+            switch (key) {
+                case 'expandCode':
+                    _this.code = _lodash2.default.toNumber('' + _this.code + obj[key]);
+                    if (_lodash2.default.isNaN(_this.code)) {
+                        _this.code = 100;
+                    }
+                    break;
+                default:
+                    _this[key] = obj[key];
+                    break;
+            }
         }
         return _this;
     }
