@@ -30,7 +30,7 @@ var UnavailableError = function (_AbstractError) {
 
         _lodash2.default.assign(_this, {
             status: 503,
-            code: 103
+            code: 100
         });
         return _this;
     }

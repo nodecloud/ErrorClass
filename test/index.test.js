@@ -97,7 +97,7 @@ describe('Other Error', function () {
         assert.equal(error.code, 102);
         assert.equal(error.status, 400);
         error = new UnavailableError();
-        assert.equal(error.code, 103);
+        assert.equal(error.code, 100);
         assert.equal(error.status, 503);
         error = new UnSupportError();
         assert.equal(error.code, 103);

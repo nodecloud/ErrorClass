@@ -26,7 +26,18 @@ A bundle of error classes
         id: '1' // you can add custom key
     });
     ```
-3. When you need a http response about a error:
+    
+3. And you can set `expandCode`, it will get a code which it contains default code and expandCode
+    
+    ```javascript
+    import {AuthError} from 'yan-error-class';        
+    throw new AuthError({
+       message: 'Invalid token'
+       expandCode: 100
+    });
+    // the code is 108100
+    ```
+4. When you need a http response about a error:
     
     ```javascript
     import {AuthError} from 'yan-error-class';
@@ -49,7 +60,7 @@ The `code` can be defined as you need.
 
 usage: authentication failure
 
-default code: 101101
+default code: 108
 
 status: 401
 
@@ -57,23 +68,15 @@ status: 401
 
 usage: bad url
 
-default code: 101102
+default code: 102
 
 status: 400
 
-### RequestBodyError
+### CloudUnavailableError
 
-usage: invalid request body
+usage: the cloud is unavailable
 
-default code: 101102
-
-status: 400
-
-### UnSupportError
-
-usage: the resource is unavailable
-
-default code: 101103
+default code: 103
 
 status: 503
 
@@ -81,49 +84,65 @@ status: 503
 
 usage: operate a resource in invalid status
 
-default code: 101104
+default code: 107
 
 status: 409
-
-### CloudUnavailableError
-
-usage: the cloud is unavailable
-
-default code: 101201
-
-status: 503
 
 ### DatabaseError
 
 usage: database error
 
-default code: 101105
+default code: 105100
 
 status: 503
 
 ### ForbiddenError
 
-usage: no permission to invoke
+usage: no permission to access a resource
 
-default code: 101108
+default code: 101
 
 status: 403
 
 ### InternalError
 
-usage: some unexpected error occurred.
+usage: internal error
 
-default code: 101107
+default code: 100
 
 status: 500
 
 ### NotFoundError
 
-usage: the resource is not exist.
+usage: a resource is not existed
 
-default code: 101106
+default code: 103
 
 status: 404
+
+### RequestBodyError
+
+usage: invalid request body
+
+default code: 102
+
+status: 400
+
+### UnavailableError
+
+usage: the resource is unavailable
+
+default code: 100
+
+status: 503
+
+### UnSupportError
+
+usage: the action is not supported
+
+default code: 103
+
+status: 503
 
 ## Custom Error Class
 
