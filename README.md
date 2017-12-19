@@ -168,11 +168,10 @@ import {AbstractError} from 'yan-error-class';
 
 export default class CustomError extends AbstractError {
     constructor(obj) {
-        super(obj);
-        _.assign(this, {
-            status: 400,
-            code: 100000
-        });
+        super(_.defaults(obj, {
+              status: 400,
+              code: 100000
+          }));
     }
 }
 ```

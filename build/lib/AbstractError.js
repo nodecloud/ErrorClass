@@ -27,12 +27,12 @@ var AbstractError = function (_Error) {
         var _this = _possibleConstructorReturn(this, (AbstractError.__proto__ || Object.getPrototypeOf(AbstractError)).call(this));
 
         _this.extra = {};
-        _this.code = 100;
         Object.setPrototypeOf(_this, AbstractError.prototype);
         if (_lodash2.default.isString(obj)) {
             _this.message = obj;
             return _possibleConstructorReturn(_this);
         }
+        _this.code = _lodash2.default.get(obj, 'code', 100);
         for (var key in obj) {
             switch (key) {
                 case 'expandCode':
@@ -40,6 +40,8 @@ var AbstractError = function (_Error) {
                     if (_lodash2.default.isNaN(_this.code)) {
                         _this.code = 100;
                     }
+                    break;
+                case 'code':
                     break;
                 default:
                     _this[key] = obj[key];

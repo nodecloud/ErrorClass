@@ -34,11 +34,11 @@ describe('AbstractError', function () {
             assert.equal(error.code, 100);
         });
         it('should runs with expandCode', function () {
-            var error = new AbstractError({
+            var error = new AuthError({
                 message: 'error',
                 expandCode: 100
             });
-            assert.equal(error.code, 100100);
+            assert.equal(error.code, 108100);
         });
         it('should runs with invalid expandCode', function () {
             var error = new AbstractError({
@@ -52,7 +52,8 @@ describe('AbstractError', function () {
         it('should runs without any unexpected results', function () {
             var error = new AbstractError({
                 message: 'error',
-                code: 100000,
+                code: 100,
+                expandCode: 100,
                 status: 401,
                 id: 1,
                 extra: {
@@ -60,7 +61,7 @@ describe('AbstractError', function () {
                 }
             });
             var httpRes = error.getHttpError();
-            assert.equal(httpRes.code, 100000);
+            assert.equal(httpRes.code, 100100);
             assert.equal(httpRes.message, 'error');
             assert.equal(typeof httpRes.id, 'undefined');
             assert.equal(typeof httpRes.extra, 'object');

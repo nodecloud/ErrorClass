@@ -26,13 +26,10 @@ var UnavailableError = function (_AbstractError) {
     function UnavailableError(obj) {
         _classCallCheck(this, UnavailableError);
 
-        var _this = _possibleConstructorReturn(this, (UnavailableError.__proto__ || Object.getPrototypeOf(UnavailableError)).call(this, obj));
-
-        _lodash2.default.assign(_this, {
+        return _possibleConstructorReturn(this, (UnavailableError.__proto__ || Object.getPrototypeOf(UnavailableError)).call(this, _lodash2.default.defaults(obj, {
             status: 503,
             code: 100
-        });
-        return _this;
+        })));
     }
 
     return UnavailableError;

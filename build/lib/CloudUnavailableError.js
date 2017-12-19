@@ -26,13 +26,10 @@ var CloudUnavailableError = function (_AbstractError) {
     function CloudUnavailableError(obj) {
         _classCallCheck(this, CloudUnavailableError);
 
-        var _this = _possibleConstructorReturn(this, (CloudUnavailableError.__proto__ || Object.getPrototypeOf(CloudUnavailableError)).call(this, obj));
-
-        _lodash2.default.assign(_this, {
+        return _possibleConstructorReturn(this, (CloudUnavailableError.__proto__ || Object.getPrototypeOf(CloudUnavailableError)).call(this, _lodash2.default.defaults(obj, {
             status: 503,
             code: 103
-        });
-        return _this;
+        })));
     }
 
     return CloudUnavailableError;

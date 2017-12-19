@@ -26,13 +26,10 @@ var NotFoundError = function (_AbstractError) {
     function NotFoundError(obj) {
         _classCallCheck(this, NotFoundError);
 
-        var _this = _possibleConstructorReturn(this, (NotFoundError.__proto__ || Object.getPrototypeOf(NotFoundError)).call(this, obj));
-
-        _lodash2.default.assign(_this, {
+        return _possibleConstructorReturn(this, (NotFoundError.__proto__ || Object.getPrototypeOf(NotFoundError)).call(this, _lodash2.default.defaults(obj, {
             status: 404,
             code: 103
-        });
-        return _this;
+        })));
     }
 
     return NotFoundError;

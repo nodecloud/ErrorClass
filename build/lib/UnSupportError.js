@@ -26,13 +26,10 @@ var UnSupportError = function (_AbstractError) {
     function UnSupportError(obj) {
         _classCallCheck(this, UnSupportError);
 
-        var _this = _possibleConstructorReturn(this, (UnSupportError.__proto__ || Object.getPrototypeOf(UnSupportError)).call(this, obj));
-
-        _lodash2.default.assign(_this, {
+        return _possibleConstructorReturn(this, (UnSupportError.__proto__ || Object.getPrototypeOf(UnSupportError)).call(this, _lodash2.default.defaults(obj, {
             status: 503,
             code: 103
-        });
-        return _this;
+        })));
     }
 
     return UnSupportError;

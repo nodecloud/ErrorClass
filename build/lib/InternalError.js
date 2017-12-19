@@ -26,13 +26,10 @@ var InternalError = function (_AbstractError) {
     function InternalError(obj) {
         _classCallCheck(this, InternalError);
 
-        var _this = _possibleConstructorReturn(this, (InternalError.__proto__ || Object.getPrototypeOf(InternalError)).call(this, obj));
-
-        _lodash2.default.assign(_this, {
+        return _possibleConstructorReturn(this, (InternalError.__proto__ || Object.getPrototypeOf(InternalError)).call(this, _lodash2.default.defaults(obj, {
             status: 500,
             code: 100
-        });
-        return _this;
+        })));
     }
 
     return InternalError;
