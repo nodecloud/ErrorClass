@@ -32,17 +32,8 @@ var AbstractError = function (_Error) {
             _this.message = obj;
             return _possibleConstructorReturn(_this);
         }
-        _this.code = _lodash2.default.get(obj, 'code', 100);
         for (var key in obj) {
             switch (key) {
-                case 'expandCode':
-                    _this.code = _lodash2.default.toNumber('' + _this.code + obj[key]);
-                    if (_lodash2.default.isNaN(_this.code)) {
-                        _this.code = 100;
-                    }
-                    break;
-                case 'code':
-                    break;
                 default:
                     _this[key] = obj[key];
                     break;

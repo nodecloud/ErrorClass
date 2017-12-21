@@ -26,10 +26,13 @@ var InfrastructureError = function (_AbstractError) {
     function InfrastructureError(obj) {
         _classCallCheck(this, InfrastructureError);
 
-        return _possibleConstructorReturn(this, (InfrastructureError.__proto__ || Object.getPrototypeOf(InfrastructureError)).call(this, _lodash2.default.defaults(obj, {
+        var _this = _possibleConstructorReturn(this, (InfrastructureError.__proto__ || Object.getPrototypeOf(InfrastructureError)).call(this, obj));
+
+        _lodash2.default.defaults(_this, {
             status: 503,
             code: 105
-        })));
+        });
+        return _this;
     }
 
     return InfrastructureError;

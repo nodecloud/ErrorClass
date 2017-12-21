@@ -26,10 +26,13 @@ var ForbiddenError = function (_AbstractError) {
     function ForbiddenError(obj) {
         _classCallCheck(this, ForbiddenError);
 
-        return _possibleConstructorReturn(this, (ForbiddenError.__proto__ || Object.getPrototypeOf(ForbiddenError)).call(this, _lodash2.default.defaults(obj, {
+        var _this = _possibleConstructorReturn(this, (ForbiddenError.__proto__ || Object.getPrototypeOf(ForbiddenError)).call(this, obj));
+
+        _lodash2.default.defaults(_this, {
             status: 403,
             code: 101
-        })));
+        });
+        return _this;
     }
 
     return ForbiddenError;

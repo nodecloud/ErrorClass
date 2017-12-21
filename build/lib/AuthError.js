@@ -26,10 +26,13 @@ var AuthError = function (_AbstractError) {
     function AuthError(obj) {
         _classCallCheck(this, AuthError);
 
-        return _possibleConstructorReturn(this, (AuthError.__proto__ || Object.getPrototypeOf(AuthError)).call(this, _lodash2.default.defaults(obj, {
+        var _this = _possibleConstructorReturn(this, (AuthError.__proto__ || Object.getPrototypeOf(AuthError)).call(this, obj));
+
+        _lodash2.default.defaults(_this, {
             status: 401,
             code: 108
-        })));
+        });
+        return _this;
     }
 
     return AuthError;

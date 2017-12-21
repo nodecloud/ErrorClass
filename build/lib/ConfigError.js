@@ -26,10 +26,13 @@ var ConfigError = function (_AbstractError) {
     function ConfigError(obj) {
         _classCallCheck(this, ConfigError);
 
-        return _possibleConstructorReturn(this, (ConfigError.__proto__ || Object.getPrototypeOf(ConfigError)).call(this, _lodash2.default.defaults(obj, {
+        var _this = _possibleConstructorReturn(this, (ConfigError.__proto__ || Object.getPrototypeOf(ConfigError)).call(this, obj));
+
+        _lodash2.default.defaults(_this, {
             status: 503,
             code: 104
-        })));
+        });
+        return _this;
     }
 
     return ConfigError;

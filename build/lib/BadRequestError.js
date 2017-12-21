@@ -26,10 +26,14 @@ var BadRequestError = function (_AbstractError) {
     function BadRequestError(obj) {
         _classCallCheck(this, BadRequestError);
 
-        return _possibleConstructorReturn(this, (BadRequestError.__proto__ || Object.getPrototypeOf(BadRequestError)).call(this, _lodash2.default.defaults(obj, {
+        var _this = _possibleConstructorReturn(this, (BadRequestError.__proto__ || Object.getPrototypeOf(BadRequestError)).call(this, obj));
+
+        _lodash2.default.defaults(_this, {
             status: 400,
             code: 102
-        })));
+        });
+        _this.code = _this.code === null ? 102 : _this.code;
+        return _this;
     }
 
     return BadRequestError;

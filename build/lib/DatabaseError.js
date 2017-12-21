@@ -26,10 +26,13 @@ var DatabaseError = function (_AbstractError) {
     function DatabaseError(obj) {
         _classCallCheck(this, DatabaseError);
 
-        return _possibleConstructorReturn(this, (DatabaseError.__proto__ || Object.getPrototypeOf(DatabaseError)).call(this, _lodash2.default.defaults(obj, {
+        var _this = _possibleConstructorReturn(this, (DatabaseError.__proto__ || Object.getPrototypeOf(DatabaseError)).call(this, obj));
+
+        _lodash2.default.defaults(_this, {
             status: 503,
             code: 105100
-        })));
+        });
+        return _this;
     }
 
     return DatabaseError;

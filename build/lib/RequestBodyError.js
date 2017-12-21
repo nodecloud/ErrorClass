@@ -26,10 +26,13 @@ var RequestBodyError = function (_AbstractError) {
     function RequestBodyError(obj) {
         _classCallCheck(this, RequestBodyError);
 
-        return _possibleConstructorReturn(this, (RequestBodyError.__proto__ || Object.getPrototypeOf(RequestBodyError)).call(this, _lodash2.default.defaults(obj, {
+        var _this = _possibleConstructorReturn(this, (RequestBodyError.__proto__ || Object.getPrototypeOf(RequestBodyError)).call(this, obj));
+
+        _lodash2.default.defaults(_this, {
             status: 400,
             code: 102
-        })));
+        });
+        return _this;
     }
 
     return RequestBodyError;

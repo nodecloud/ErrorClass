@@ -26,18 +26,7 @@ A bundle of error classes
         id: '1' // you can add custom key
     });
     ```
-    
-3. And you can set `expandCode`, it will get a code which it contains default code and expandCode
-    
-    ```javascript
-    import {AuthError} from 'yan-error-class';        
-    throw new AuthError({
-       message: 'Invalid token'
-       expandCode: 100
-    });
-    // the code is 108100
-    ```
-4. When you need a http response about a error:
+3. When you need a http response about a error:
     
     ```javascript
     import {AuthError} from 'yan-error-class';

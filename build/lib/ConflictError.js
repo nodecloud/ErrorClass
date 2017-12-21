@@ -26,10 +26,13 @@ var ConflictError = function (_AbstractError) {
     function ConflictError(obj) {
         _classCallCheck(this, ConflictError);
 
-        return _possibleConstructorReturn(this, (ConflictError.__proto__ || Object.getPrototypeOf(ConflictError)).call(this, _lodash2.default.defaults(obj, {
+        var _this = _possibleConstructorReturn(this, (ConflictError.__proto__ || Object.getPrototypeOf(ConflictError)).call(this, obj));
+
+        _lodash2.default.defaults(_this, {
             status: 409,
             code: 107
-        })));
+        });
+        return _this;
     }
 
     return ConflictError;
